@@ -15,7 +15,7 @@ jobs:
         run: ls -la
 
       - name: Validate HTML exists
-        run: test -f index1.html
+        run: test -f index.html
 
       - name: Success message
         run: echo "HTML CI Passed"
