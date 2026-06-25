@@ -1,0 +1,23 @@
+name: HTML CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Files
+        run: ls -la
+
+      - name: Check HTML Exists
+        run: test -f index.html
+
+      - name: Success Message
+        run: echo "CI completed successfully!"
